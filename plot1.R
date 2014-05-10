@@ -1,5 +1,7 @@
 #Read Data
-myData <- read.table(file = "household_power_consumption.txt", header = TRUE, sep = ";" )
+ptm <-proc.time()
+myData <- read.table(file = "household_power_consumption.txt", header = TRUE, sep = ";", skip = 66240 )
+proc.time() - ptm
 
 myData[myData=="?"] <- NA #Convert "?" values to NAs 
 
