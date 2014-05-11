@@ -3,9 +3,6 @@
 colnames = colnames(read.table("household_power_consumption.txt", nrow = 1, header = TRUE, sep=";"))
 myData <- read.table(file = "household_power_consumption.txt", sep = ";", skip = 66637, col.names = colnames, nrows = 2880 )
 
-
-View(myData)
-
 myData[myData=="?"] <- NA #Convert "?" values to NAs 
 
 #Convert strings to dates and time
